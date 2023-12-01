@@ -7,3 +7,32 @@ INSERT INTO bears (id, name, age, sex, color, temperament, alive) VALUES
 (6,"Grinch", 2, "M", "Black", "Grinchy", 1),
 (7,"Wendy", 6, "F", "Blue", "naive", 1),
 (8,null, 20, "M", "black", "aggressive", 0);
+
+
+SELECT name, age
+FROM bears
+WHERE sex = 'F';
+
+
+SELECT name 
+FROM bears 
+ORDER BY name ASC;
+
+SELECT name, age
+FROM bears
+WHERE alive = 1  -- Assuming 'alive' is a column indicating if the bear is alive (1 for alive, 0 for deceased)
+ORDER BY age ASC;
+
+
+SELECT name, age
+FROM bears
+ORDER BY age DESC
+LIMIT 1;
+
+SELECT name, age
+FROM bears
+ORDER BY age ASC
+LIMIT 1;
+
+
+
